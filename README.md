@@ -58,6 +58,7 @@ apt-get install puppet
 * Once puppet has installed on the master, navigate to `/etc/puppet/manifests`.
 * Create a new `site.pp` file in that directory.
 * Add the following lines in that file
+* Here is an [internal link]() to this file.
 
 ```
 package {'git':
