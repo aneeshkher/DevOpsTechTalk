@@ -1,5 +1,13 @@
 # CSC DevOps Tech Talk - Puppet  
 
+## Team members
+1. Aneesh Kher (aakher)
+2. Gauri Naik (gnaik2)
+3. Krishna Teja Dinavahi (kdinava)
+4. Arvind Telharkar (adtelhar)  
+
+---
+
 ## Introduction to puppet
 Puppet is an open source configuration management tool. On a high level, it consists of one `puppet master` and many `puppet agent`s. The agents are authorized at the puppet using SSL certification. Once the puppet signs the agent's request, the agent receives the configuration from the master at periodic intervals.  
 
