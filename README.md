@@ -140,6 +140,23 @@ Ensure that you can ping `Your_server` from the puppet agent.
 
 ---
 
+## Advantages
+* automates the provisioning, configuration and management of machines and software running on them
+* allows rapid, repeatable changes
+* define once and apply to many machines
+* automatically apply configuration changes
+* enforce consistency across systems
+* can define configuration using few lines of code
+* good extensibility and open source license
+
+---
+
+## Limitations
+* while applying the configuration, if one of the tasks fails then it still continues with the other tasks
+* when nodes are added and removed frequently, it becomes tedious to manage the certificates on the puppet master server
+
+---
+
 ## Screencast
 
 Here is a [link to](https://youtu.be/Jb-lILFToAI) the screencast. It shows the basic installation along with a simple use case.  
