@@ -178,3 +178,5 @@ Here is a [link to](https://youtu.be/Jb-lILFToAI) the screencast. It shows the b
 ---
 
 ## References
+* http://docs.puppetlabs.com/guides/introduction.html
+* http://docs.puppetlabs.com/puppet/4.2/reference/architecture.html
