@@ -18,7 +18,7 @@ Users describe system resources and their state in files called ‘Puppet manife
 
 ##### Agent/Master architecture
 Puppet uses an agent/master (client/server) architecture for configuring systems, using the Puppet agent and Puppet master applications. Agents never see the manifests that comprise their configuration. Instead, the Puppet master compiles the manifests down into a document called a catalog, and serves the catalog to the agent node. 
-Catalog is a document that describes the desired system state for one specific computer. It lists all of the resources that need to be managed, as well as any dependencies between those resources. Puppet master server controls important configuration information and managed agent nodes request only their own configuration catalogs. In this architecture, managed nodes run the Puppet agent application, usually as a background service. One or more servers run the Puppet master application. Periodically, Puppet agent sends facts to the Puppet master and requests a catalog. The master compiles and returns that node’s catalog, using several sources of information it has access to. Once it receives a catalog, Puppet agent applies it by checking each resource the catalog describes. If it finds any resources that are not in their desired state, it makes any changes necessary to correct them. 
+Catalog is a document that describes the desired system state for one specific computer. It lists all of the resources that need to be managed, as well as any dependencies between those resources. Puppet master server controls important configuration information and managed agent nodes request only their own configuration catalogs. In this architecture, managed agent nodes run the Puppet agent application, usually as a background service. One or more servers run the Puppet master application. Periodically, Puppet agent sends facts to the Puppet master and requests a catalog. The master compiles and returns that node’s catalog, using several sources of information it has access to. Once it receives a catalog, Puppet agent applies it by checking each resource the catalog describes. If it finds any resources that are not in their desired state, it makes any changes necessary to correct them. 
 
 ##### Standalone architecture
 Puppet can run in a stand-alone architecture, where each managed server has its own complete copy of its configuration information and compiles its own catalog. In this architecture, managed nodes run the Puppet apply application, usually as a scheduled task or cron job. Like the Puppet master application, Puppet apply needs access to several sources of configuration data, which it uses to compile a catalog for the node it is managing. After Puppet apply compiles the catalog, it immediately applies it by checking each resource the catalog describes. If it finds any resources that are not in their desired state, it will make any changes necessary to correct them. 
@@ -69,7 +69,7 @@ apt-get install puppetmaster
 * Run the command `apt-get update`.
 * Install the puppet agent by running the command `apt-get install puppet`. Notice the difference in the agent installation. Here, we are using `puppet` as opposed to `puppetmaster` for installing at the master.
 
-To Summarize, follow the command to install puppet on the agent machines.
+To Summarize, follow these commands to install puppet on the agent machines.
 ```
 sudo su
 wget https://apt.puppetlabs.com/puppetlabs-release-pc1-trusty.deb
@@ -174,3 +174,5 @@ Ensure that you can ping `Your_server` from the puppet agent.
 Here is a [link to](https://youtu.be/Jb-lILFToAI) the screencast. It shows the basic installation along with a simple use case.  
 
 ---
+
+## References
