@@ -14,9 +14,9 @@ Puppet is an open source configuration management tool. On a high level, it cons
 ---
 
 #### Puppet architecture
-##### Agent/Master architecture
 Users describe system resources and their state in files called ‘Puppet manifests’. Configuration can be described in high-level terms without using OS specific commands such as yum, apt. ‘Puppet manifests’ are compiled and applied against the target system directly or distributed using the client server paradigm. 
 
+##### Agent/Master architecture
 Puppet uses an agent/master (client/server) architecture for configuring systems, using the Puppet agent and Puppet master applications. Agents never see the manifests that comprise their configuration. Instead, the Puppet master compiles the manifests down into a document called a catalog, and serves the catalog to the agent node. 
 Catalog is a document that describes the desired system state for one specific computer. It lists all of the resources that need to be managed, as well as any dependencies between those resources. Puppet master server controls important configuration information and managed agent nodes request only their own configuration catalogs. In this architecture, managed nodes run the Puppet agent application, usually as a background service. One or more servers run the Puppet master application. Periodically, Puppet agent sends facts to the Puppet master and requests a catalog. The master compiles and returns that node’s catalog, using several sources of information it has access to. Once it receives a catalog, Puppet agent applies it by checking each resource the catalog describes. If it finds any resources that are not in their desired state, it makes any changes necessary to correct them. 
 
